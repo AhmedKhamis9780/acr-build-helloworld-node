@@ -63,7 +63,7 @@ jobs:
         with:
             resource-group: ${{ secrets.RESOURCE_GROUP }}
             dns-name-label: 'kill-app'
-            image: ${{ env.REPO_SERVER_NAME  }}/sampleapp:lastest
+            image: '${{ env.REPO_SERVER_NAME }}/${{ env.image_name }}:lastest' 
             # cpu: 1   #Optional
             # memory: 0.1   #Optional
             registry-login-server: ${{ env.REPO_SERVER_NAME }}
