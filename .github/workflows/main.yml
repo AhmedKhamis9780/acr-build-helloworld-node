@@ -71,7 +71,7 @@ jobs:
             registry-password: ${{ secrets.repo_password }}
             name: ${{ env.Container_instance_name }}
             location: ${{ env.Container_instance_region }}
-            restartPolicy: OnFailure
+            restart-policy: OnFailure
 
       - name: logout
         run: |
