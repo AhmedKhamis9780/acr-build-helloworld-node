@@ -62,8 +62,8 @@ jobs:
         uses: 'azure/aci-deploy@v1'
         with:
             resource-group: ${{ secrets.RESOURCE_GROUP }}
-            dns-name-label: ${{ env.REPO_SERVER_NAME }}
-            image: ${{ env.REPO_SERVER_NAME  }}/sampleapp:${{ github.sha }}
+            dns-name-label: ${{ secrets.RESOURCE_GROUP }}
+            image: ${{ env.REPO_SERVER_NAME  }}/sampleapp:lastest
             registry-login-server: ${{ env.REPO_SERVER_NAME }}
             registry-username: ${{ secrets.azure_repo_admin }}
             registry-password: ${{ secrets.repo_password }}
