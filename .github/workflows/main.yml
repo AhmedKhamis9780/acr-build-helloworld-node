@@ -62,7 +62,7 @@ jobs:
         uses: 'azure/aci-deploy@v1'
         with:
             resource-group: ${{ secrets.RESOURCE_GROUP }}
-            dns-name-label: ${{ secrets.RESOURCE_GROUP }}
+            dns-name-label: 'kill-app'
             image: ${{ env.REPO_SERVER_NAME  }}/sampleapp:lastest
             registry-login-server: ${{ env.REPO_SERVER_NAME }}
             registry-username: ${{ secrets.azure_repo_admin }}
